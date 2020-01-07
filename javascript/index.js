@@ -6,9 +6,10 @@ const PLACE_HOLDER = "Hello, World!";
 
 function refreshQrCode() {
     var current_address = texts[index] ? texts[index] : PLACE_HOLDER;
-    qrcode.makeCode(current_address);
+    qrcode.html('');
+    qrcode.qrcode(current_address);
     address.html(current_address);
-    $('#qrcode img').width('60%');
+    $('#qrcode canvas').width('60%');
 }
 
 function init() {
@@ -19,8 +20,7 @@ function init() {
 
 $(function () {
     textarea = $('#texts');
-    var $qrcode = $('#qrcode');
-    qrcode = new QRCode($qrcode[0], '');
+    qrcode = $('#qrcode');
     address = $('#address');
 
     texts = textarea.val().split('\n');
@@ -30,7 +30,7 @@ $(function () {
     textarea.on("change", init);
     textarea.on("input", init);
 
-    $qrcode.on("click", function () {
+    qrcode.on("click", function () {
         index++;
         if (index == texts.length) {
             index = 0;
