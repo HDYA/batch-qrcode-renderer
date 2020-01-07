@@ -1,0 +1,27 @@
+{
+  "name": "batch-qrcode-renderer",
+  "homepage": "https://github.com/HDYA/batch-qrcode-renderer",
+  "authors": [
+    "HDYA <hdya_backfire@sina.cn>"
+  ],
+  "description": "Render texts / links into QRCodes line by line",
+  "main": "index.html",
+  "keywords": [
+    "QRCode",
+    "Render",
+    "Batch"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "jquery-qrcode": "*"
+  }
+}
